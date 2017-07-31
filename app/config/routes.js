@@ -20,6 +20,10 @@ var IndexRoute = router.IndexRoute;
 var Main = require("../components/Main");
 var Home = require("../components/Home");
 var Login = require("../components/Login");
+var Register = require("../components/Register");
+var Homes = require("../components/Homes");
+var Homeid = require("../components/Homeid");
+var Dashboard = require("../components/Dashboard");
 
 // Export the Routes
 module.exports = (
@@ -29,6 +33,10 @@ module.exports = (
 
             <Route path="/" component={Home} />
             <Route path="/login" component={Login} />
+            <Route path="/register" component={Register} />
+            <Route path="/homes" component={Homes} />
+            <Route path="/home/{id}" component={Homeid} />
+            <Route path="/dashboard" component={Dashboard} />
 
         </Route>
     </Router>
