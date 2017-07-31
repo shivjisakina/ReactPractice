@@ -10,6 +10,8 @@
 * Chart package for charts
 * Zillow API
 
+![lucidchartroutes](https://github.com/shivjisakina/FinalProject/blob/master/resources/assets/images/FinalProjectRoutes%20-%20Page%201.png)
+
 ## Resourceful links/starter code: 
 
 ### Node requires
