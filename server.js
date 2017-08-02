@@ -16,6 +16,8 @@ db.once('open', function () {
 });
 
 var Person = require('./models/Person');
+var People = require("./models/People.js")
+
 
 
 var app = express();
@@ -41,10 +43,28 @@ app.post('/formsubmit', function (req, res) {
     console.log(req.body.firstname)
     console.log(req.body.lastname)
 
-    db.collection("people").insertOne({
+    People.insertMany({
         firstname: req.body.firstname,
         lastname: req.body.lastname
     })
+
+})
+
+app.get('/getpeople', function (req, res) {
+
+    People.find().exec(
+
+        function (err, result) {
+
+            if (err) {
+                res.json(err)
+            } else {
+                res.json(result)
+            }
+
+        }
+    )
+
 
 })
 
